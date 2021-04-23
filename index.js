@@ -10,10 +10,10 @@ useFindAndModify: false,
 useCreateIndex: true
 }).then(() =>{
 
-console.log('berhasil conek ke database')
+console.log('Berhasil Connect Ke Database')
 }).catch((e) =>{
 console.log(e)
-console.log('gagal konek ke database')
+console.log('Gagal Connect Ke Database')
 
 })
 app.use(bodyParser.json({
@@ -48,7 +48,7 @@ app.get('/daerah/:namadaerah/:id', (req, res) =>{
     //})
     //const userRoutes = require('./ router/user')
     app.use('/user/', require('./routes/user'))
-
+    app.use('/kegiatan/', require('./routes/kegiatan'))
 
 app.listen(3000,() => {
     console.log('Server Mulai')
